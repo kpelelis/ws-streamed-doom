@@ -1,0 +1,7 @@
+doomgeneric
+build/
+websocket_client/node_modules
+websocket_client/.parcel-cache
+websocket_client/.dist
+websocket_client/yarn-error.log
+websocket_client/dist
