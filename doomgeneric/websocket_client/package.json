@@ -1,0 +1,17 @@
+{
+  "name": "@grafana/doom-ws-stream",
+  "version": "1.0.0",
+  "description": "Streaming client of doom frames",
+  "author": "Kostas Pelelis <kpelelis@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "parcel": "^2.3.2",
+    "twgl.js": "^4.21.2"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "start": "parcel serve index.html"
+  }
+}
