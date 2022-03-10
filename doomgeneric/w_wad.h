@@ -38,6 +38,8 @@
 
 typedef struct lumpinfo_s lumpinfo_t;
 
+void I_EndRead (void);
+
 struct lumpinfo_s
 {
     char	name[8];
