@@ -1,41 +1,23 @@
-# doomgeneric
-The purpose of doomgeneric is to make porting Doom easier.
-Of course Doom is already portable but with doomgeneric it is possible with just a few functions.
-The limitation is there is no sound!
+# Webscoket Streamed Doom
 
-To try it you will need a WAD file (game data). If you don't own the game, shareware version is freely available (doom1.wad).
+Note: For this to work you need to obtain a WAD file (which is shareware),
+just google for (doom1.wad)
 
-# porting
-Create a file named doomgeneric_yourplatform.c and just implement these functions to suit your platform.
-* DG_Init
-* DG_DrawFrame
-* DG_SleepMs
-* DG_GetTicksMs
-* DG_GetKey
+## Build the Game
 
-|Functions            |Description|
-|---------------------|-----------|
-|DG_Init              |Initialize your platfrom (create window, framebuffer, etc...).
-|DG_DrawFrame         |Frame is ready in DG_ScreenBuffer. Copy it to your platform's screen.
-|DG_SleepMs           |Sleep in milliseconds.
-|DG_GetTicksMs        |The ticks passed since launch in milliseconds.
-|DG_GetKey            |Provide keyboard events.
-|DG_SetWindowTitle    |Not required. This is for setting the window title as Doom sets this from WAD file.
+`cd doomgeneric && make -f Makefile.ws`
 
-# platforms
-I have ported to Windows, X11, and Soso. Just look at (doomgeneric_win.c or doomgeneric_xlib.c).
+## Run
 
-Note that X11 port is not efficient since it generates pixmap by XDrawPoint. It can be further improved by using X11 extensions.
+`./doomgeneric`
 
-## SDL
+## Run the simple client
 
-![SDL](screenshots/sdl.png)
+`cd doomgeneric/websocket_client && yarn && yarn start`
 
-## Windows
-![Windows](screenshots/windows.png)
+Visit [http://localhost:1234](http://localhost:1234)
 
-## X11 - Ubuntu
-![Ubuntu](screenshots/ubuntu.png)
+## TODO
 
-## X11 - FreeBSD
-![FreeBSD](screenshots/freebsd.png)
+- [ ] Controls over the wire
+- [ ] Compression
